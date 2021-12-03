@@ -48,10 +48,12 @@ $(document).ready(() => {
         let time  = $(`<div class="col-2 hour">${hour}</div>`)
         let description = $('<textarea class="col-8 description"></textarea>')
         description.text(eventsData.events[i-9])
+        console.log(i)
+        console.log(moment().hour())
         //connects description class to the settings set on style.css based on wether or not the time is present, past, or future
-        if (today.hour() < now.hour()) {
+        if (i < moment().hour()) {
             description.addClass("past")
-        } else if (today.hour() === now.hour()) {
+        } else if (i === moment().hour()) {
             description.addClass("present")
         } else {
             description.addClass("future")
