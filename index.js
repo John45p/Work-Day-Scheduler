@@ -12,7 +12,7 @@ $(document).ready(() => {
 
     //Set the current day at the top, also from momentjs
     $("#currentDay").text(now.format("dddd, MMMM Do"))
-
+ 
     //Load events from local storage using JSON and parsing
     var events = JSON.parse(localStorage.getItem("events"))
 /// if events is empty/ null then run the function 
